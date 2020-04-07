@@ -12,6 +12,9 @@ def grouper(iterable, n, fillvalue=None):
     args = [iter(iterable)] * n
     return zip_longest(*args, fillvalue=fillvalue)
 
+def Grouper(*x,**y):
+    return list(grouper(*x,**y))
+
 def Range(*x):
     if isinstance(x[0], int):
         return list(range(*x))
