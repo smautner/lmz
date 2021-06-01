@@ -15,10 +15,18 @@ def grouper(iterable, n, fillvalue=None):
 def Grouper(*x,**y):
     return list(grouper(*x,**y))
 
+
+
+
+
+
 def Range(*x):
-    if isinstance(x[0], int):
-        return list(range(*x))
-    return list(range(len(x[0])))
+    # loi = length or int
+    loi = lambda y: y if isinstance(y,int) else len(y)
+    #x[0] = loi(x[0])
+    #if len(x) > 1: 
+    #    x[1] = loi(x[1])
+    return list(range(*map(loi,x)))
 
 def Transpose(x): 
     return list(zip(*x))
