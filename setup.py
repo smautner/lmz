@@ -30,25 +30,25 @@ def update_version_py():
 
 
     except EnvironmentError:
-        print("unable to run git, leaving lmz/_version.py alone")
+        print("unable to run git, leaving lmz/__version__.py alone")
         return
     stdout = p.communicate()[0].decode("utf-8")
 
     print ("stdout:",stdout)
     if p.returncode != 0:
-        print("unable to run git, leaving lmz/_version.py alone")
+        print("unable to run git, leaving lmz/__version__.py alone")
         return
     ver = "0.1."+stdout.strip()
     #ver = str(int(ver,16)) # pypi doesnt like base 16
-    f = open("lmz/_version.py", "w")
+    f = open("lmz/__version__.py", "w")
     f.write(VERSION_PY % ver)
     f.close()
-    print("set lmz/_version.py to '%s'" % ver)
+    print("set lmz/__version__.py to '%s'" % ver)
 
 
 def get_version():
     try:
-        f = open("lmz/_version.py")
+        f = open("lmz/__version__.py")
     except EnvironmentError:
         return None
     for line in f.readlines():

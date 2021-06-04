@@ -16,6 +16,11 @@ def Grouper(*x,**y):
     return list(grouper(*x,**y))
 
 
+def iterselect(iterable, n):
+    while n>0:
+        next(iterable)
+        n-=1
+    return next(iterable)
 
 
 
