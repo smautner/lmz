@@ -6,6 +6,9 @@ def Map(*x,**y):
 def Zip(*x,**y):
     return list(zip(*x,**y))
 
+def Filter(*x,**y):
+    return list(filter(*x,**y))
+
 def grouper(iterable, n, fillvalue=None):
     "Collect data into fixed-length chunks or blocks"
     # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
@@ -29,9 +32,9 @@ def Range(*x):
     # loi = length or int
     loi = lambda y: y if isinstance(y,int) else len(y)
     #x[0] = loi(x[0])
-    #if len(x) > 1: 
+    #if len(x) > 1:
     #    x[1] = loi(x[1])
     return list(range(*map(loi,x)))
 
-def Transpose(x): 
+def Transpose(x):
     return list(zip(*x))
