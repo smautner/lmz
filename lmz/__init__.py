@@ -9,9 +9,11 @@ def Zip(*x,**y):
 def Filter(*x,**y):
     return list(filter(*x,**y))
 
-def grouper(iterable, n, fillvalue=None):
+def grouper(iterable, n, fillvalue=None, list_no_fill=False):
     "Collect data into fixed-length chunks or blocks"
     # grouper('ABCDEFG', 3, 'x') --> ABC DEF Gxx"
+    if list_no_fill:
+        return [iterable[i:i + n] for i in range(0, len(iterable), n)]
     args = [iter(iterable)] * n
     return zip_longest(*args, fillvalue=fillvalue)
 
