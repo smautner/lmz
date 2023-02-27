@@ -1,7 +1,16 @@
 from itertools import zip_longest
+from functools import partial
+
+def PMap(*x,**y):
+    f = partial(x[0],**y)
+    if len(x) == 2:
+        return Map(f,x[1])
+    else:
+        return Map(f,*x[1:])
+
 
 def Map(*x,**y):
-    return list(map(*x,**y))
+    return list(map(*x))
 
 def Zip(*x,**y):
     return list(zip(*x,**y))
