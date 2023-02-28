@@ -1,16 +1,15 @@
 from itertools import zip_longest
 from functools import partial
 
-def PMap(*x,**y):
+def Map(*x,**y):
     f = partial(x[0],**y)
     if len(x) == 2:
-        return Map(f,x[1])
+        return rawMap(f,x[1])
     else:
-        return Map(f,*x[1:])
+        return rawMap(f,*x[1:])
 
-
-def Map(*x,**y):
-    return list(map(*x))
+def rawMap(*x,**y):
+     return list(map(*x))
 
 def Zip(*x,**y):
     return list(zip(*x,**y))
