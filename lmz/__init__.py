@@ -1,5 +1,6 @@
 from itertools import zip_longest
-from functools import partial
+from functools import partial, reduce
+import operator
 
 def Map(*x,**y):
     f = partial(x[0],**y)
@@ -37,6 +38,8 @@ def iterselect(iterable, n):
 
 
 
+def flatten(li):
+    return reduce(operator.iconcat, li, [])
 
 def Range(*x):
     # loi = length or int
