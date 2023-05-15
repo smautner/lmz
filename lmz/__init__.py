@@ -38,7 +38,7 @@ def iterselect(iterable, n):
 
 
 
-def flatten(li):
+def Flatten(li):
     return reduce(operator.iconcat, li, [])
 
 def Range(*x):
