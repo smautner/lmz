@@ -42,11 +42,7 @@ def Flatten(li):
     return reduce(operator.iconcat, li, [])
 
 def Range(*x):
-    # loi = length or int
     loi = lambda y: y if isinstance(y,int) else len(y)
-    #x[0] = loi(x[0])
-    #if len(x) > 1:
-    #    x[1] = loi(x[1])
     return list(range(*map(loi,x)))
 
 def Transpose(x):

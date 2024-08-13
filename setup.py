@@ -103,8 +103,8 @@ setup(
     package_data={},
     url='https://github.com/smautner/listmapzip',
     license='GPLv3',
-    description='return lists',
-    #long_description=open('README.md').read(),
+    description='small functions that should be part of python3, supplementing generator functions',
+    long_description=open('README.md').read(),
     install_requires=[],
     cmdclass={'sdist': sdist, 'install': install}
 )
