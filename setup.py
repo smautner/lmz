@@ -105,6 +105,7 @@ setup(
     license='GPLv3',
     description='small functions that should be part of python3, supplementing generator functions',
     long_description=open('README.md').read(),
+    long_description_content_type = 'text/markdown',
     install_requires=[],
     cmdclass={'sdist': sdist, 'install': install}
 )
