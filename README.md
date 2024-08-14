@@ -1,4 +1,3 @@
-from lmz import Map,Zip,Filter,Grouper,Range,Transpose,Flatten
 # listmapzip
 
 provides a few functions that should be part of python3
